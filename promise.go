@@ -7,7 +7,7 @@ import (
 
 
 type Promise struct {
-	run     	func(resolve func(interface{}), reject func(error))
+	run         func(resolve func(interface{}), reject func(error))
 	onPending   bool
 	finalResult interface{}
 	err         error
@@ -16,7 +16,7 @@ type Promise struct {
 
 func CreatePromise(run func(resolve func(interface{}), reject func(error))) *Promise {
 	var promise = &Promise{
-		run:     	 run,
+		run:         run,
 		onPending:   true,
 		finalResult: nil,
 		err:         nil,
